@@ -1,9 +1,10 @@
 export interface BuildPaths {
     entry: string;
     html: string;
-    public: string;
     output: string;
     src: string;
+    shared: string;
+    pages: string;
 }
 
 export type BuildMode = 'production' | 'development';

@@ -1,0 +1,70 @@
+@import '@shared/colors/colors';
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border-top: 2px solid $green;
+}
+
+.footerContent {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.footerContent h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.footerInputSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emailInput {
+  background-color: #333;
+  border: 1px solid $green; /* Зелёная граница */
+  padding: 10px;
+  width: 250px;
+  color: white;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.submitButton {
+  background-color: $green;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  background-color: $green;
+}
+
+.footerPrivacy {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.footerPrivacy a {
+  color: $green;
+  text-decoration: none;
+}
+
+.footerPrivacy a:hover {
+  text-decoration: underline;
+}
+
+.checkbox {
+  margin-right: 5px;
+}
