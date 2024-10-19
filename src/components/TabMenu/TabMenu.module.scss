@@ -1,0 +1,56 @@
+.menuContainer {
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menuHeader {
+  margin-bottom: 20px;
+  font-size: 24px;
+  letter-spacing: 5px;
+  border-top: 2px dashed white;
+  border-bottom: 2px dashed white;
+  display: inline-block;
+  padding: 10px 0;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.menuItem {
+  font-size: 20px;
+  margin: 10px 0;
+  position: relative;
+  cursor: pointer;
+
+  span {
+    float: right;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    background-color: #00ff41;
+  }
+}
+
+.active {
+  background-color: #00ff41;
+  padding: 5px;
+}
+
+.contactInfo {
+  margin-top: 20px;
+  font-size: 16px;
+
+  p {
+    margin: 5px 0;
+  }
+}
