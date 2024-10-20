@@ -2,12 +2,13 @@
 
 .bodyContainer{
   background-color: $black;
+  overflow-x: hidden;
 }
 
 .mainContainer{
   background-color: $black;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .outletContainer{

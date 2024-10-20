@@ -10,8 +10,12 @@
   margin-top: 30px;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 40vh;
   width: 25%;
+
+  @media(max-width:1200px){
+    width: 80%;
+  }
 }
 
 .menuHeader {
@@ -30,7 +34,6 @@
 .menuItem {
   width: 350px;
   font-size: 20px;
-
   padding: 7px;
   position: relative;
   cursor: pointer;
@@ -42,9 +45,18 @@
     opacity: 0.6;
   }
 
+  a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: $green;
   }
+
 }
 
 .active {
@@ -59,4 +71,5 @@
   p {
     margin: 5px 0;
   }
+
 }

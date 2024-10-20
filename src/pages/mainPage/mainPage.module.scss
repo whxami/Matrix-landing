@@ -1,9 +1,25 @@
 @import "@shared/fonts/fonts";
+@import "@shared/colors/colors";
+
+.mainContainer{
+  display:flex;
+  flex-direction:column;
+}
+
+.listContainer{
+  width:100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left:-170px;
+  margin-bottom: 200px;
+}
 
 .imagesContainer{
-  width: 75%;
+  width: 75vh;
   height:200px;
 }
+
 
 .matrixContainer {
   position: relative;
@@ -11,6 +27,7 @@
   width: 105vh;
   margin-left: 50px;
   margin-top:30px;
+  margin-bottom: 100px;
 }
 
 .matrixImage {
@@ -27,6 +44,12 @@
   height: 35%;
 }
 
+.headers{
+  font-size: 25px;
+  color: $white;
+  margin-bottom: 20px;
+}
+
 .text {
   font-family: $code;
   position: absolute;
@@ -38,3 +61,54 @@
   color: white;
   padding: 5px;
 }
+
+.binaryHumansImage{
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 220px;
+}
+
+.servicesTextContainer{
+  z-index: 1;
+  top:0;
+  left:0;
+  color:$white;
+  font-size: 40px;
+  opacity: 0.8;
+  width:100%;
+}
+
+.servicesText{
+  display:flex;
+  flex-direction: column;
+  gap: 100px;
+  font-size: 80px;
+  width: 100%;
+}
+
+.pHover{
+  &:hover{
+    opacity: 0.8;
+    cursor:pointer;
+  }
+}
+
+.headContainer{
+  position: relative;
+  margin-bottom:130px;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.whyUsFont{
+  font-family: $binaryText;
+  font-size: 200px;
+  color: $white;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+
