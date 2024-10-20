@@ -1,0 +1,30 @@
+@import "@/shared/colors/colors";
+@import "@/shared/fonts/fonts";
+
+.octagon {
+  width: 270px;
+  height: 100px;
+  position: relative;
+  border: 1px solid $green;
+  background: transparent;
+  clip-path: polygon(
+                  0% 0%, 70% 0%,
+                  100% 30%, 100% 70%,
+                  100% 100%, 30% 100%,
+                  0% 70%, 0% 30%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $green;
+  font-size: 20px;
+  font-family: $text;
+  margin:50px 0 200px 10px;
+  text-align: center;
+
+  &:hover{
+    color: $white;
+    opacity: 0.6;
+    cursor:pointer;
+  }
+}

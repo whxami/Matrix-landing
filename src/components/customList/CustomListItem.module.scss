@@ -1,0 +1,53 @@
+@import "@shared/colors/colors";
+@import "@shared/fonts/fonts";
+
+.menuContainer {
+  background-color: $black;
+  padding: 20px;
+  font-family: $text;
+  color: $green;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+  border-bottom: 1px solid $lightGray;
+}
+
+.menuHeader {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px 0;
+  color: $green;
+  font-size: 25px;
+}
+
+.menuHeader:hover {
+  color: $white;
+  transition: 0.3s;
+}
+
+.activeTitle {
+  color: $white;
+}
+
+.arrow {
+  color: $green;
+  transition: transform 0.3s ease;
+  &.open {
+    transform: rotate(120deg);
+  }
+}
+
+.menuContent {
+  padding: 0 10px;
+  background-color: $gray;
+  border-left: 1px solid $green;
+  border-right: 1px solid $green;
+  color: $white;
+  opacity: 0.6;
+  font-size: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}

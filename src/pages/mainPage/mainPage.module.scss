@@ -1,0 +1,114 @@
+@import "@shared/fonts/fonts";
+@import "@shared/colors/colors";
+
+.mainContainer{
+  display:flex;
+  flex-direction:column;
+}
+
+.listContainer{
+  width:100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left:-170px;
+  margin-bottom: 200px;
+}
+
+.imagesContainer{
+  width: 75vh;
+  height:200px;
+}
+
+
+.matrixContainer {
+  position: relative;
+  height: 90vh;
+  width: 105vh;
+  margin-left: 50px;
+  margin-top:30px;
+  margin-bottom: 100px;
+}
+
+.matrixImage {
+
+}
+
+.consoleImage{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+  height: 35%;
+}
+
+.headers{
+  font-size: 25px;
+  color: $white;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: $code;
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  font-size: 23px;
+  top: 10px;
+  left: 20px;
+  color: white;
+  padding: 5px;
+}
+
+.binaryHumansImage{
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 220px;
+}
+
+.servicesTextContainer{
+  z-index: 1;
+  top:0;
+  left:0;
+  color:$white;
+  font-size: 40px;
+  opacity: 0.8;
+  width:100%;
+}
+
+.servicesText{
+  display:flex;
+  flex-direction: column;
+  gap: 100px;
+  font-size: 80px;
+  width: 100%;
+}
+
+.pHover{
+  &:hover{
+    opacity: 0.8;
+    cursor:pointer;
+  }
+}
+
+.headContainer{
+  position: relative;
+  margin-bottom:130px;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.whyUsFont{
+  font-family: $binaryText;
+  font-size: 200px;
+  color: $white;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+
