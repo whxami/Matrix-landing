@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './Footer.module.scss';
+import {URL} from "@shared/api/api";
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -16,12 +17,11 @@ const Footer = () => {
             setIsSuccess(false);
 
             try {
-                await axios.post('http://localhost:3060/api/sendmail', { email });
+                await axios.post(URL, { email });
                 setIsSuccess(true);
                 setEmail('');
             } catch (error) {
                 setIsError(true);
-                console.error('Failed to send email:', error);
             } finally {
                 setIsLoading(false);
             }
