@@ -1,8 +1,15 @@
 @import "@shared/colors/colors";
 
-.mainContainer{
+.bodyContainer{
   background-color: $black;
 }
+
+.mainContainer{
+  background-color: $black;
+  display: flex;
+  justify-content: center;
+}
+
 .outletContainer{
 
 }

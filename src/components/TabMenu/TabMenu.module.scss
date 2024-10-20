@@ -1,12 +1,13 @@
 @import "@shared/colors/colors";
+@import "@shared/fonts/fonts";
 
 .menuContainer {
   text-align: center;
   color: $white;
   background-color: $black;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: $text;
   display: flex;
-  justify-content: center;
+  margin-top: 30px;
   flex-direction: column;
   align-items: center;
   height: 100vh;
@@ -14,11 +15,10 @@
 }
 
 .menuHeader {
-  margin-bottom: 20px;
   font-size: 24px;
   letter-spacing: 5px;
   display: inline-block;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .menuList {
@@ -28,10 +28,10 @@
 }
 
 .menuItem {
-  width: 200px;
+  width: 350px;
   font-size: 20px;
 
-  padding: 10px;
+  padding: 7px;
   position: relative;
   cursor: pointer;
   display: flex;

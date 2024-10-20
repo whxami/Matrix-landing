@@ -1,15 +1,14 @@
 import React from "react";
 import MainLayout from "@/app/layouts/MainLayout/MainLayout";
-
-const routesWithMenu = [{
-    path:"/menu",
-    element:<div></div>,
-}]
+import MainPage from "@pages/mainPage/mainPage";
 
 export const routes = [
     {
         path: "/",
         element: <MainLayout />,
-        children: routesWithMenu,
+        children: [{
+            path:"main",
+            element:<MainPage/>,
+        }],
     },
 ];

@@ -4,7 +4,7 @@ import styles from './TabMenu.module.scss'
 const TabMenu = () => {
     return (
         <div className={styles.menuContainer}>
-            <div className={styles.menuHeader}>-------   МЕНЮ   -------</div>
+            <div className={styles.menuHeader}><span>-------   МЕНЮ   -------</span></div>
             <ul className={styles.menuList}>
                 <li className={`${styles.menuItem}`}>ГЛАВНАЯ <span>/01/</span></li>
                 <li className={styles.menuItem}>УСЛУГИ <span>/02/</span></li>
@@ -13,7 +13,7 @@ const TabMenu = () => {
             </ul>
             <div className={styles.contactInfo}>
                 <p>ТЕЛЕФОН: +7(234)57-89-10</p>
-                <p>EMAIL: VIRTUALOVDEV@GMAIL.COM</p>
+                <p>TG: @dexzyy</p>
             </div>
         </div>
     );
