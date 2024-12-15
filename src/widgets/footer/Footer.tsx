@@ -1,54 +1,38 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import styles from './Footer.module.scss';
-import {URL} from "@shared/api/api";
+import React from 'react';
+import classes from './Footer.module.scss';
+
+const links = ['Ссылка 1', 'Ссылка 2', 'Ссылка 3', 'Ссылка 4'];
+const socials = ['Соц. сеть 1', 'Соц. сеть 2', 'Соц. сеть 3', 'Соц. сеть 4', 'Соц. сеть 5'];
 
 const Footer = () => {
-    const [email, setEmail] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [isError, setIsError] = useState(false);
-    const [isSuccess, setIsSuccess] = useState(false);
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        if (email) {
-            setIsLoading(true);
-            setIsError(false);
-            setIsSuccess(false);
-
-            try {
-                await axios.post(URL, { email });
-                setIsSuccess(true);
-                setEmail('');
-            } catch (error) {
-                setIsError(true);
-            } finally {
-                setIsLoading(false);
-            }
-        }
-    };
-
     return (
-        <div id='section5' className={styles.footerContainer}>
-            <div className={styles.footerContent}>
-                <h2>ARE YOU READY TO START COOPERATING?</h2>
-                <form onSubmit={handleSubmit} className={styles.footerInputSection}>
-                    <input
-                        type="email"
-                        className={styles.emailInput}
-                        placeholder="Your mail"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)} // Обновляем состояние при вводе
-                        required
-                    />
-                    <button className={styles.submitButton} disabled={isLoading}>
-                        {isLoading ? 'Sending...' : 'Yes'}
-                    </button>
-                </form>
-                {isError && <p style={{ color: 'red' }}>Failed to send email.</p>}
-                {isSuccess && <p style={{ color: 'green' }}>Email sent successfully!</p>}
+        <footer className={classes.footerContainer}>
+            <div id="contacts" className={classes.content}>
+                <div className={classes.descContainer}>
+                    <div className={classes.titleText}>Про нашу</div>
+                    <div className={classes.titleText}>веб-студию</div>
+                    <div className={classes.descriptionText}>
+                        We are a full-service digital agency that helps businesses build a strong online presence
+                        through website development, SEO, and digital marketing.
+                    </div>
+                </div>
+                <div className={classes.linksAndSocialsContainer}>
+                    <div className={classes.linksContainer}>
+                        <div className={classes.subtitleText}>Быстрые ссылки</div>
+                        {links.map((item, index) => (
+                            <div key={index} className={classes.links}>{item}</div>
+                        ))}
+                    </div>
+                    <div className={classes.linksContainer}>
+                        <div className={classes.subtitleText}>Наши соц. сети</div>
+                        {socials.map((item, index) => (
+                            <div key={index} className={classes.links}>{item}</div>
+                        ))}
+                    </div>
+                </div>
             </div>
-        </div>
+            <div className={classes.credsContainer}>2022 — 2025, © УНП 693257297</div>
+        </footer>
     );
 };
 

@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-$code: 'Source Code Pro', monospace;
-$text: 'Fira Mono', monospace;
-$binaryText: "VT323", monospace;
+@font-face {
+  font-family: 'Monocraft';
+  src: url('@/assets/Monocraft.ttf' ) format('truetype');
+}
+
+$binaryText: "Monocraft";

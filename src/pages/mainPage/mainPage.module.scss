@@ -1,114 +1,241 @@
 @import "@shared/fonts/fonts";
 @import "@shared/colors/colors";
 
-.mainContainer{
-  display:flex;
-  flex-direction:column;
-}
-
-.listContainer{
-  width:100%;
-  position: relative;
+.mainContainer {
   display: flex;
   flex-direction: column;
-  left:-170px;
-  margin-bottom: 200px;
-}
-
-.imagesContainer{
-  width: 75vh;
-  height:200px;
-}
-
-
-.matrixContainer {
-  position: relative;
-  height: 90vh;
-  width: 105vh;
-  margin-left: 50px;
-  margin-top:30px;
-  margin-bottom: 100px;
-}
-
-.matrixImage {
-
-}
-
-.consoleImage{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 10px;
-  right: 100px;
-  height: 35%;
-}
-
-.headers{
-  font-size: 25px;
-  color: $white;
-  margin-bottom: 20px;
-}
-
-.text {
-  font-family: $code;
-  position: absolute;
-  display:flex;
-  flex-direction: column;
-  font-size: 23px;
-  top: 10px;
-  left: 20px;
-  color: white;
-  padding: 5px;
-}
-
-.binaryHumansImage{
-  position:relative;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  margin-bottom: 220px;
-}
-
-.servicesTextContainer{
-  z-index: 1;
-  top:0;
-  left:0;
-  color:$white;
-  font-size: 40px;
-  opacity: 0.8;
-  width:100%;
-}
-
-.servicesText{
-  display:flex;
-  flex-direction: column;
-  gap: 100px;
-  font-size: 80px;
-  width: 100%;
-}
-
-.pHover{
-  &:hover{
-    opacity: 0.8;
-    cursor:pointer;
+  background-color: black;
+  overflow-x:hidden;
+  @media (max-width: 768px) {
+    padding: 0 20px 0 20px;
   }
 }
 
-.headContainer{
-  position: relative;
-  margin-bottom:130px;
-  height:100vh;
-  display:flex;
-  flex-direction: column;
+.morfPic{
+  width:100%;
+  @media (max-width: 768px) {
+    width: 110%;
+  }
 }
 
-.whyUsFont{
+.leftTextRed {
+  text-align: right;
+  color: $red;
   font-family: $binaryText;
-  font-size: 200px;
-  color: $white;
-  opacity: 0.9;
-  z-index: 1;
+  font-size: 60px;
+  text-shadow: 0 0 32px $red;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    text-align: center;
+  }
 }
 
+.leftTextWhite {
+  text-align: right;
+  color: $white;
+  font-family: $binaryText;
+  font-size: 60px;
+  text-shadow: 0 0 32px $red;
 
+  @media (max-width: 768px) {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerText {
+  display: flex;
+  margin: 30px 0;
+  font-size: 16px;
+  font-family: $binaryText;
+  color: $green;
+  text-shadow: 0 0 20px $green;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+}
+
+.images {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  background-image: url('@/assets/background.png');
+  background-size: 150%;
+  width: 100%;
+  padding: 50px 0 120px 0;
+
+  position: relative;
+
+  @media (max-width: 768px) {
+    background-size: 500%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.faceImage {
+  height: 600px;
+  width: 400px;
+  margin-left: 100px;
+  order:1;
+  @media (max-width: 768px) {
+    height: 300px;
+    width: 200px;
+    margin-left: 0;
+  }
+}
+
+.questions {
+  background-color: $modaleGray;
+  height: 280px;
+  width: 600px;
+  border-radius: 20px;
+  color: $white;
+  font-family: $binaryText;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 40px;
+  margin-top: 20px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 20px;
+    height: 140px;
+    margin-top:30px;
+  }
+}
+
+.greenColor {
+  color: $green;
+}
+
+.questionsContainer {
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  flex-wrap:wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.HeadText {
+  font-family: $binaryText;
+  font-size: 48px;
+  color: $white;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+.descriptionText {
+  display: flex;
+  font-size: 24px;
+  font-family: $binaryText;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+
+  }
+}
+
+.contactUs {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 45%;
+  padding: 50px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('@/assets/background.png');
+  background-size: 120%;
+  align-self: center;
+
+  @media (max-width: 768px) {
+    background-size: 220%;
+  }
+}
+
+.inputs {
+  height: 55px;
+  font-family: $binaryText;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+    padding: 8px;
+    height: 30px;
+  }
+}
+
+.questInpt{
+  height: 70px;
+}
+
+.contactText{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+  @media (max-width: 768px) {
+
+  }
+}
+
+.sendBtn {
+  background-color: $red;
+  font-size: 32px;
+  border-radius: 10px;
+  font-family: $binaryText;
+  color: $white;
+  padding: 17px;
+  box-shadow: 0 0 54.5px 0 $red;
+  margin-bottom: 230px;
+  cursor:pointer;
+  transition: 0.3s;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 40px;
+  }
+  &:hover{
+    background-color: $darkRed;
+  }
+}

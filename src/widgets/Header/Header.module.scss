@@ -1,0 +1,135 @@
+@import "@shared/fonts/fonts";
+@import "@shared/colors/colors";
+
+.headerContainer {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray;
+  height: 80px;
+  width: 90%;
+  border-radius: 20px;
+  padding: 0 5%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  @media (max-width: 1400px) {
+    justify-content: space-between;
+  }
+}
+
+.headerPointers {
+  display: flex;
+  gap: 101px;
+  color: $white;
+  font-family: $binaryText;
+  font-size: 20px;
+
+  @media (max-width: 1400px) {
+    display: none; // Скрываем на мобильных устройствах
+  }
+}
+
+.pointer {
+  cursor: pointer;
+  &:hover {
+    color: $green;
+  }
+}
+
+.headerContacts {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+}
+
+.phone {
+  color: $green;
+  font-family: $binaryText;
+  font-size: 25px;
+}
+
+.requestButton {
+  background-color: $green;
+  color: $black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 54px;
+  font-family: $binaryText;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $hoverGray;
+    color: $white;
+  }
+
+  @media (max-width: 1400px) {
+    display: block;
+  }
+}
+
+.menuToggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: $white;
+
+  @media (max-width: 1400px) {
+    display: block; // Показываем кнопку меню на мобильных устройствах
+    order: 2; // Размещаем после кнопки "Оставить заявку"
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: 160px;
+  right: 5%; // Меню появляется справа
+  background-color: $gray;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+
+  @media (min-width: 1400px) {
+    display: none; // Скрываем меню на десктопах
+  }
+
+  .pointer, .phone {
+    color: $white;
+    font-family: $binaryText;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .headerMain {
+    justify-content: space-between;
+  }
+
+  // Скрываем элементы для мобильных устройств
+  .phone{
+    display: none;
+  }
+
+}

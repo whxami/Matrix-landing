@@ -1,90 +1,74 @@
-import React, {useState} from 'react';
-import matrixPerson from '@/assets/matrixPerson.png';
-import console from '@/assets/console.png';
-import binaryHumans from '@/assets/binaryHumans.png';
-import head from '@/assets/head.png';
-import styles from './mainPage.module.scss';
-import CustomList from '@/components/customList/CustomList';
-import {Item} from '@/components/customList/CustomList';
-import Portfolio from "@/components/Portfolio/Portfolio";
+import React from 'react';
+import Header from "@/widgets/Header/Header";
+import classes from './mainPage.module.scss'
+import face from '@/assets/face.gif';
+import WorkStages from "@/components/workStages/workStages";
+import Morf from "@/assets/morf.png"
+import Footer from "@/widgets/footer/Footer";
+import Slider from "@/components/Swiper/Swiper";
+
+
+
 
 function MainPage() {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-    const menuItems: Item[] = [
-        {title: 'UX Design', description: 'User experience design principles'},
-        {title: 'React', description: 'Building user interfaces with React'},
-        {title: 'Branding', description: 'Branding strategies and guidelines'},
-        {title: 'Strategy', description: 'Business and marketing strategy'},
-        {title: 'Target', description: 'Setting and achieving goals'},
-        {title: 'Sales funnel', description: 'Sales process optimization'},
-        {title: 'Competitor analysis', description: 'Analyzing competitors'},
-        {title: 'Copywriting', description: 'Writing effective marketing copy'}
-    ];
-
-    const PortfolioItems = ['Design studio', 'Logistic company', 'Lighting and sound business']
-
     return (
-        <div className={styles.mainContainer}>
-            <div id='section1' className={styles.matrixContainer}>
-                <img src={matrixPerson} alt='Matrix Person' height="85%"/>
-                <div className={styles.text}>
-                    <span>string name = "company name"</span>
-                    <span>string job = "company job"</span>
-                    <span>{"cout << result << endl;"}</span>
-                    <span>{"cout << result << endl;"}</span>
-                    <span>{"cout << result << endl;"}</span>
-                </div>
-                <div className={styles.consoleImage}>
-                    <img src={console} alt='Console' height="100%"/>
-                    <div className={styles.text} style={{top: '45px'}}>
-                        <span>Contact with us</span>
-                        <span>Address: </span>
-                        <span>Gmail: </span>
+        <div className={classes.mainContainer}>
+            <div className={classes.headerText}>
+                ты интернет, я интернет, мы интернет
+            </div>
+            <Header/>
+            <main className={classes.main}>
+                <div id="main" className={classes.images}>
+                    <div className={classes.questionsContainer}>
+                        <div className={classes.questions}>
+                            <div className={classes.HeadText}>
+                                Вы приходите с вопросами:
+                            </div>
+                            <div className={classes.descriptionText}>
+                                <p className={classes.greenColor}>·</p> Какие услуги вы предоставляете после завершения
+                                проекта?
+                            </div>
+                        </div>
+                        <div className={classes.faceImage}>
+                            <img src={face} alt='Face' width="100%" height="100%"/>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id='section2' className={styles.listContainer}>
-                <p className={styles.headers} style={{marginLeft: '30px', marginBottom: '0px'}}>Work stages</p>
-                <div style={{alignSelf: 'flex-end'}}>
-                    <p className={styles.headers} style={{opacity: 0.6, marginBottom: '10px'}}>Studying your
-                        business</p>
-                    <p className={styles.headers} style={{opacity: 0.6, marginBottom: '0', fontSize: '20px'}}>The
-                        outcome of this will be a market positioning strategy,</p>
-                    <p className={styles.headers} style={{opacity: 0.6, fontSize: '20px'}}>we will understand our
-                        objectives and constraints.</p>
+                <div className={classes.HeadText}>И получаете ответы...</div>
+                <WorkStages/>
+                <div className={classes.morfPic}>
+                    <img src={Morf} alt='Morf' width="100%" height="100%"/>
                 </div>
-                <CustomList items={menuItems} setActiveIndex={setActiveIndex} activeIndex={activeIndex}/>
-            </div>
-            <div id='section3' style={{alignSelf: 'flex-start', marginLeft: '-130px', marginBottom: '20px'}}>
-                <p style={{fontSize: "25px", color: "white"}}>SERVICES</p>
-            </div>
 
-            <div className={styles.binaryHumansImage}>
-                <div className={styles.servicesTextContainer}>
-                    <div className={styles.servicesText}>
-                        <p className={styles.pHover} style={{textAlign: 'left'}}>Website development</p>
-                        <p className={styles.pHover} style={{textAlign: 'right'}}>Sales funnel creation</p>
-                        <p className={styles.pHover} style={{textAlign: 'left'}}>Site maintenance</p>
-                        <p className={styles.pHover} style={{textAlign: 'right', paddingRight: '70px'}}>Marketing</p>
+                <Slider/>
+
+                <div id="message" className={classes.contactContainer}>
+                    <div style={{
+                        textShadow: '0 0 23px #00FF00',
+                        display: "flex",
+                        justifyContent: 'center',
+                        alignItems: 'center',
+
+                    }} className={classes.HeadText}>НАПИСАТЬ НАМ
+                    </div>
+                    <div className={classes.contactUs}>
+                        <div  className={`${classes.descriptionText} + ${classes.contactText}`}>Погрузись в матрицу - ты
+                            интернет,
+                            я интернет, мы интернет. Забудь про web 1.0 и 2.0, мы интернет будущего!
+                        </div>
+                        <div style={{color: 'white'}} className={classes.descriptionText}>Ваше имя</div>
+                        <input className={classes.inputs}></input>
+                        <div style={{color: 'white'}} className={classes.descriptionText}>Ваш телефон</div>
+                        <input className={classes.inputs}></input>
+                        <div style={{color: 'white'}} className={classes.descriptionText}>Ваш вопрос</div>
+                        <input className={`${classes.inputs} ${classes.questInpt}`}/>
+
                     </div>
                 </div>
-                <div style={{height: '100%', width: '100%', display: 'flex', position: 'absolute'}}>
-                    <img src={binaryHumans} alt='Binary Humans' height="100%" width="45%"
-                         style={{opacity: '0.8'}}/>
-                </div>
-            </div>
-            <div id='section4'>
-                <p className={styles.headers} style={{marginLeft: '-130px'}}>Our Cases</p>
-                <Portfolio items={PortfolioItems}/>
-            </div>
-            <div className={styles.headContainer}>
-                <p className={styles.whyUsFont}>Why us?</p>
-                <div style={{height: '100%', position: 'absolute', top: '10'}}>
-                    <img src={head} alt='Head Image' height='100%' style={{opacity: '0.8'}}/>
+                <div className={classes.sendBtn}>ОТПРАВИТЬ</div>
 
-                </div>
-            </div>
+            </main>
+            <Footer/>
         </div>
     );
 }
