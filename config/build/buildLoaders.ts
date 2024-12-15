@@ -57,7 +57,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
 
     const babelLoader = buildBabelLoader(options);
 
-    const fileLoader = {test: /\.(png|woff|woff2|eot|ttf|svg)$/, use: ['url-loader?limit=100000']}
+    const fileLoader = {test: /\.(woff|woff2|eot|ttf)$/, use: ['url-loader?limit=100000']}
 
     return [
         assetLoader,
